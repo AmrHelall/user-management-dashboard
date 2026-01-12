@@ -26,7 +26,11 @@ export function UsersTable({ users }: UsersTableProps) {
             </tr>
           ) : null}
           {users.map((user) => (
-            <tr key={user.id} onClick={() => navigate(`/users/${user.id}`)}>
+            <tr
+              key={user.id}
+              onClick={() => navigate(`/users/${user.id}`)}
+              className="cursor-pointer hover:bg-gray-50"
+            >
               <td className="px-4 py-3 text-left ">{user.name}</td>
               <td className="px-4 py-3 text-left ">{user.email}</td>
               <td className="px-4 py-3 text-left ">{user.role}</td>
